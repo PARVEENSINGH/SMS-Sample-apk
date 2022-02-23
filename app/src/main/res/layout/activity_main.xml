@@ -5,14 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
     <TextView
+        android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/send_sms"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:textStyle="bold"
+        android:textSize="@dimen/header_top_margin"
+        android:layout_marginTop="@dimen/header_top_margin"/>
+    <EditText
+        android:id="@+id/mobile_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_title"
+        android:layout_marginTop="@dimen/header_top_margin"
+        android:hint="@string/receipent_mobile"
+        android:layout_marginStart="@dimen/header_top_margin"
+        android:layout_marginEnd="@dimen/header_top_margin" />
+    <EditText
+        android:id="@+id/msg_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_id"
+        android:layout_marginTop="@dimen/header_top_margin"
+        android:hint="@string/enter_msg"
+        android:layout_marginStart="@dimen/header_top_margin"
+        android:layout_marginEnd="@dimen/header_top_margin"/>
+    <Button
+        android:id="@+id/btn_send_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/msg_id"
+        android:paddingBottom="@dimen/header_top_margin"
+        android:layout_marginTop="@dimen/header_top_margin"
+        android:text="@string/send_sms_btn"
+        android:textAlignment="center"/>
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SMS</string>
+    <string name="send_sms">SEND SMS</string>
+    <string name="receipent_mobile">Mobile Number</string>
+    <string name="enter_msg">Enter Message</string>
+    <string name="send_sms_btn">Send</string>
 </resources>
