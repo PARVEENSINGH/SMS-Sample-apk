@@ -45,10 +45,11 @@ public class MainActivity extends Activity {
         Message = editText_msg.getText().toString();
         if(ContextCompat.checkSelfPermission(this, SEND_SMS)!= PackageManager.PERMISSION_GRANTED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(this, SEND_SMS)){}
-            else{
+            else
                 ActivityCompat.requestPermissions(this,new String[]{SEND_SMS},MY_PERMISSIONS_REQUEST_SEND_SMS);
-            }
         }
+        ActivityCompat.requestPermissions(this,new String[]{SEND_SMS},MY_PERMISSIONS_REQUEST_SEND_SMS);
+        return;
     }
 
     @Override
